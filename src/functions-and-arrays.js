@@ -1,21 +1,49 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+function maxOfTwoNumbers(a,b) {
+  if (a > b){
+    return a;
+  } 
+  else {
+    return b;
+  }
+}
 
 
 
 // Iteration #2: Find longest word
-const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+function findLongestWord(words) {
+  
 
-function findLongestWord() {}
+  const orderedWords = words.sort((a,b) => a.length - b.length);
+    
+  if (words.length === 0 ){
+    return null;
+  }
+
+  if (orderedWords[orderedWords.length-1] === orderedWords[orderedWords.length-2]) {
+    return (orderedWords[orderedWords.length-2])
+    
+  } else {
+    return (orderedWords[orderedWords.length-1])
+  }
+  
+      
+  }
 
 
 
 // Iteration #3: Calculate the sum
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+function sumNumbers(numbers) {
 
-
+let finalSum = 0;
+for (let i=0; i<numbers.length; i++){
+finalSum += numbers[i];
+}
+  return finalSum
+}
+ 
 
 // Iteration #3.1 Bonus:
 function sum() {}
@@ -26,13 +54,37 @@ function sum() {}
 // Level 1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(numbers) {
+
+let finalSum = 0;
+
+if (numbers.length === 0){
+  return null;
+}
+
+for (let i=0; i<numbers.length; i++){
+finalSum += numbers[i];
+}
+  return finalSum / numbers.length;
+}
 
 
 // Level 2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+function averageWordLength(arr) {
+let charSum = 0;
+
+if (arr.length === 0){
+  return null;
+}
+
+for (let i = 0; i<arr.length; i++) {
+  charSum += arr[i].length
+}
+return charSum / arr.length;
+
+ }
 
 // Bonus - Iteration #4.1
 function avg() {}
@@ -52,7 +104,14 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(arr) {
+
+  if (arr.length === 0 ){
+    return null;
+  }
+
+ if (arr.indexOf[arr.i])
+}
 
 
 
@@ -107,6 +166,10 @@ const matrix = [
 ];
 
 function greatestProduct() {}
+
+
+
+
 
 
 
