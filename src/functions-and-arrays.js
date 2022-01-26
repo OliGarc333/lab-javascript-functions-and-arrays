@@ -102,27 +102,25 @@ function uniquifyArray(arr) {
   return newArray;
 }
 
-/*
-
-    array: peter, vilma, john, wilson, vilma;
-
-  function iterate thru an array of strings when function is called. 
-    If the elements within the array are not duplicated, throw them into newArray.
-    If the elements within the array is duplicated, throw in only the first index into newArray
-
-
-    
-
-   
-
-  */
-
-function blah() {}
-
 // Iteration #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+function doesWordExist(arr, target){
+
+  if (arr.length === 0){
+    return null;
+  }
+  if (arr.length!== 0){
+    for (let i=0; i<arr.length;i++){
+      if (arr[i]=== target){
+        return true;
+      } else{
+        return false;
+      }
+    }
+  }
+}
+
 
 // Iteration #7: Count repetition
 const wordsCount = [
@@ -139,7 +137,24 @@ const wordsCount = [
   'matter'
 ];
 
-function howManyTimes() {}
+function howManyTimes(arr,target) {
+
+  if (arr.length ===0){
+    return 0;
+  }
+  if (arr.length !==0){
+    let counter =0
+    
+    for (let i=0; i<arr.length;i++){
+      if (arr[i] === target){
+        counter += 1
+      }
+      
+      
+    }
+    return counter;
+  }
+ }
 
 // Iteration #8: Bonus
 const matrix = [
